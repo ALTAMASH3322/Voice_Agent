@@ -3,6 +3,7 @@ Multi-Language Example
 Demonstrates multilingual support in the Voice Agent.
 """
 
+import time
 from typing import Dict, List
 
 
@@ -208,9 +209,6 @@ class MultiLanguageVoiceAgent:
                 break
             except Exception as e:
                 print(f"\n❌ Error: {e}")
-
-
-import time
 
 
 def main():
