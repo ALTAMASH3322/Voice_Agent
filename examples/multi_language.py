@@ -194,7 +194,11 @@ class MultiLanguageVoiceAgent:
                     continue
                 
                 if user_input.lower().startswith('lang '):
-                    lang_code = user_input.split()[1]
+                    parts = user_input.split()
+                    if len(parts) < 2:
+                        print("❌ Please specify a language code (e.g., 'lang es')")
+                        continue
+                    lang_code = parts[1]
                     if self.change_language(lang_code):
                         self.greet()
                     continue

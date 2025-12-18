@@ -105,7 +105,7 @@ class StreamingVoiceAgent:
         
         start_time = time.time()
         stream = self.generate_response_stream(test_input)
-        self.speak_streaming(stream)
+        full_response = self.speak_streaming(stream)
         elapsed = time.time() - start_time
         
         print(f"⏱️  Total time: {elapsed:.1f}s (user heard response immediately)")
